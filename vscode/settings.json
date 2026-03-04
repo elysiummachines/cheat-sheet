@@ -1,0 +1,8 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "git.terminalAuthentication": false,
+  "git.postCommitCommand": "none",
+  "git.useIntegratedAskPass": false,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.fontFamily": "AdwaitaMono Nerd Font Mono"
+}
