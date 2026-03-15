@@ -1,0 +1,18 @@
+# === PSReadLine initialization ===
+Import-Module PSReadLine -MinimumVersion 2.4.0 -Force
+
+# === Active Theme ===
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\clean-detailed.omp.json" | Invoke-Expression
+
+# === Other Themes ===
+# tokyonight_storm
+# clean-detailed
+# 1_shell
+# craver
+# kushal
+# slim
+
+# === Key bindings ===
+Set-PSReadLineKeyHandler -Key 'Ctrl+Spacebar' -Function MenuComplete
+Set-PSReadLineKeyHandler -Key 'Enter' -Function AcceptLine
+Set-PSReadLineKeyHandler -Key 'Ctrl+c' -Function Copy
