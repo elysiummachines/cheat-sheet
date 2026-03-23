@@ -1,11 +1,17 @@
+[init]
+	defaultBranch = main
 [user]
 	name = Name
 	email = Email
 	signingkey = ~/.ssh/id_ed25519_github.pub
 [core]
-	editor = code-insiders --wait
+	editor = code --wait
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 	autocrlf = true
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff $LOCAL $REMOTE" 
 [gpg]
 	format = ssh
 [commit]

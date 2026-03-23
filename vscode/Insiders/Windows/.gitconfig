@@ -1,0 +1,27 @@
+[init]
+    defaultBranch = main
+[user]
+    name = Name
+    email = Email
+    signingkey = ~/.ssh/id_ed25519_github.pub
+[core]
+    editor = code-insiders --wait
+    sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+    autocrlf = true
+[diff]
+    tool = vscode-insiders
+[difftool "vscode-insiders"]
+    cmd = "code-insiders --wait --diff $LOCAL $REMOTE" 
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[gpg "ssh"]
+    program = C:/Windows/System32/OpenSSH/ssh-keygen.exe
+[push]
+    autoSetupRemote = true

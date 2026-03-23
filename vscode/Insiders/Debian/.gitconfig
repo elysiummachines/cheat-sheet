@@ -1,0 +1,24 @@
+[init]
+	defaultBranch = main
+[user]
+	name = name
+	email = email
+	signingkey = /home/llmbox/.ssh/id_ed25519.pub
+[core]
+	editor = code-insiders --wait
+	autocrlf = input
+[diff]
+	tool = vscode-insiders
+[difftool "vscode-insiders"]
+	cmd = "code-insiders --wait --diff $LOCAL $REMOTE" 
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[push]
+	autoSetupRemote = true
